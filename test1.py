@@ -1,9 +1,9 @@
 import pytest
-from app.calculator import Calculator
+from app.calcu import сalculator
 
 class TestCalc: # тестируем весь калькулятор нажатием на стрелку
     def setup(self):
-        self.calc = Calculator
+        self.calc = сalculator
 
     def test_multiply_calculate_correctly(self): # умножение
         assert self.calc.multiply(self, 2, 2) == 4
@@ -16,8 +16,6 @@ class TestCalc: # тестируем весь калькулятор нажат�
 
     def test_adding_calculate_correctly(self): # сложение
         assert self.calc.adding(self, 7, 2) == 9
-
-
 
     def test_multiply_calculation_failed(self): # умножение
         assert self.calc.multiply(self, 2, 2) == 5 # негативный
